@@ -4,7 +4,7 @@
   "scripts": {
     "build:images": "gulp images",
     "deploy": "git push heroku master",
-    "start": "gulp clean && gulp & nodemon app.js"
+    "start": "gulp clean && gulp build && gulp"
   },
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",
@@ -28,6 +28,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-eslint": "^3.0.1",
     "gulp-imagemin": "^3.0.2",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "node-sass": "^4.5.0",
