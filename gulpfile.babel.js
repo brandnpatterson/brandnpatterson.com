@@ -11,12 +11,10 @@ import webpack    from 'webpack-stream';
 
 var reload = sync.reload;
 
-gulp.task('build', ['scripts', 'styles']);
-
 gulp.task('clean', del.bind(null, ['public/css', 'public/js'], {read: false}));
 gulp.task('clean:images', del.bind(null, ['public/images'], {read: false}));
 
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['scripts', 'styles', 'watch']);
 
 gulp.task('images', ['clean:images'], () => {
   return gulp.src('assets/images/**/*')
@@ -31,17 +29,17 @@ gulp.task('lint', () => {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('nodemon', (cb) => {
-	var started = false;
-	return nodemon({
-		script: 'app.js'
-	}).on('start', function () {
-		if (!started) {
-			cb();
-			started = true;
-		}
-	});
-});
+// gulp.task('nodemon', (cb) => {
+// 	var started = false;
+// 	return nodemon({
+// 		script: 'app.js'
+// 	}).on('start', function () {
+// 		if (!started) {
+// 			cb();
+// 			started = true;
+// 		}
+// 	});
+// });
 
 gulp.task('scripts', () => {
   return gulp.src(['assets/js/index.js'])
@@ -49,14 +47,14 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('public/js'));
 });
 
-gulp.task('server', ['nodemon'], () => {
-  sync.init(null, {
-    proxy: 'http://localhost:8887',
-    notify: false,
-    files: 'public/**/*.*',
-    port: 8888
-  });
-});
+// gulp.task('server', ['nodemon'], () => {
+//   sync.init(null, {
+//     proxy: 'http://localhost:8887',
+//     notify: false,
+//     files: 'public/**/*.*',
+//     port: 8888
+//   });
+// });
 
 gulp.task('styles', () => {
   return gulp.src('assets/sass/style.scss')

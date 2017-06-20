@@ -1,6 +1,6 @@
 const express = require('express');
 const routes = require('./routes/index');
-const port = process.env.PORT || 8887;
+const port = process.env.PORT || 8888;
 const app = express();
 
 app.set('view engine', 'pug');
