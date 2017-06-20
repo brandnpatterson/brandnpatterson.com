@@ -4,7 +4,7 @@
   "scripts": {
     "build:images": "gulp images",
     "deploy": "git push heroku master",
-    "start": "gulp clean && gulp & nodemon app.js"
+    "start": "gulp clean && gulp build && gulp"
   },
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",
@@ -14,8 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.3",
-    "jquery": "^3.1.1",
-    "pug": "^2.0.0-rc.2"
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
@@ -28,10 +27,12 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-eslint": "^3.0.1",
     "gulp-imagemin": "^3.0.2",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "node-sass": "^4.5.0",
     "nodemon": "^1.11.0",
+    "pug": "^2.0.0-rc.2",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-stream": "^3.2.0"
