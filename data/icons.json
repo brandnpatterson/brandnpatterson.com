@@ -1,0 +1,64 @@
+{
+  "icons": [
+    {
+      "title": "JavaScript",
+      "filepath": "/images/about-icons/js.png",
+      "alt": "JavaScript"
+    },
+    {
+      "title": "React",
+      "filepath": "/images/about-icons/react.png",
+      "alt": "React"
+    },
+    {
+      "title": "Webpack",
+      "filepath": "/images/about-icons/webpack.jpeg",
+      "alt": "Webpack"
+    },
+    {
+      "title": "Node",
+      "filepath": "/images/about-icons/node.jpg",
+      "alt": "Node"
+    },
+    {
+      "title": "MongoDB",
+      "filepath": "/images/about-icons/mongodb.png",
+      "alt": "MongoDB"
+    },
+    {
+      "title": "PHP",
+      "filepath": "/images/about-icons/php.png",
+      "alt": "PHP"
+    },
+    {
+      "title": "Slim",
+      "filepath": "/images/about-icons/slim.jpeg",
+      "alt": "Slim"
+    },
+    {
+      "title": "jQuery",
+      "filepath": "/images/about-icons/jquery.png",
+      "alt": "jQuery"
+    },
+    {
+      "title": "Git",
+      "filepath": "/images/about-icons/git.png",
+      "alt": "Git"
+    },
+    {
+      "title": "Pug",
+      "filepath": "/images/about-icons/pug.svg",
+      "alt": "Pug"
+    },
+    {
+      "title": "Sass",
+      "filepath": "/images/about-icons/sass.png",
+      "alt": "Sass"
+    },
+    {
+      "title": "Composer",
+      "filepath": "/images/about-icons/composer.jpeg",
+      "alt": "Composer"
+    }
+  ]
+}

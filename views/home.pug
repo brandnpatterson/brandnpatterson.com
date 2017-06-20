@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  #home
+    a(href='#portfolio')
+      .message-bubble
+        p.message Welcome to my Portfolio!
+        p.message-two Here is some of my work!
+      img.home-icon(src='images/me.jpg', alt='Brandon Patterson')
+      .home-title
+        h2 Brandon Patterson
+        hr
+        h2 Web Developer
+  #portfolio.section
+    h2 Portfolio
+    .flex-container
+      each product in products
+        .flex-container
+          a.flex-container(href=`${product.link}`)
+            img.product-img(src=`${product.filepath}`, alt=`${product.alt}`)
+          p= product.about
+  #about.section
+    h2 About
+    p I'm a music composition major that went from writing music to writing code! I use these technologies to create web applications.
+    .flex-container
+      each icon in icons
+        img(src=`${icon.filepath}`, alt=`${icon.alt}`)  
+  #contact.section
+      h2 Contact
+      a(href='images/brandon-patterson-resume-2017.pdf', download='')
+        img(src='images/brandon-patterson-resume-2017.png')

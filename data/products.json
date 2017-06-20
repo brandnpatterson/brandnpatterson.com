@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "title": "Flutter",
+      "link": "https://github.com/brandnpatterson/flutter",
+      "filepath": "/images/flutter.png",
+      "alt": "Flutter",
+      "about": "PHP Slim - Twig - Illuminate - JavaScript"
+    },
+    {
+      "title": "Crawford Notch",
+      "link": "https://crawford-notch.surge.sh",
+      "filepath": "/images/crawford-notch.png",
+      "alt": "Crawford Notch",
+      "about": "jQuery - Handlebars - Instafeed"
+    },
+    {
+      "title": "Goldilox Designs",
+      "link": "http://goldilox.surge.sh",
+      "filepath": "/images/goldilox.png",
+      "alt": "Goldilox Designs",
+      "about": "React - React Router - Webpack"
+    },
+    {
+      "title": "Jaime Quach",
+      "link": "http://jaime-quach.surge.sh",
+      "filepath": "/images/jaime-quach.png",
+      "alt": "Jaime Quach",
+      "about": "Pug - jQuery - Instafeed"
+    }
+  ]
+}
