@@ -51,10 +51,10 @@ gulp.task('scripts', () => {
 
 gulp.task('server', ['nodemon'], () => {
   sync.init(null, {
-    proxy: 'http://localhost:8888',
+    proxy: 'http://localhost:8887',
     notify: false,
     files: 'public/**/*.*',
-    port: 8887
+    port: 8888
   });
 });
 
