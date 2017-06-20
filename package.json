@@ -3,8 +3,9 @@
   "version": "2.0.0",
   "scripts": {
     "build:images": "gulp images",
+    "dev": "gulp clean && gulp build && gulp",
     "deploy": "git push heroku master",
-    "start": "gulp clean && gulp build && gulp"
+    "start": "node app.js"
   },
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",
