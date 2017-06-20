@@ -7,6 +7,6 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 app.use('/', routes);
 
-app.listen(port, function () {
+app.listen(port, () => {
   console.log(`This app is running on http://localhost:${port}`);
 });

@@ -9,7 +9,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import sync       from 'browser-sync';
 import webpack    from 'webpack-stream';
 
-const reload = sync.reload;
+var reload = sync.reload;
 
 gulp.task('build', ['scripts', 'styles']);
 
@@ -68,6 +68,6 @@ gulp.task('styles', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('assets/js/**/*', ['scripts']);
-  gulp.watch('assets/sass/**/*', ['styles']);
+  gulp.watch('assets/js/**/*', ['scripts', reload]);
+  gulp.watch('assets/sass/**/*', ['styles', reload]);
 });
