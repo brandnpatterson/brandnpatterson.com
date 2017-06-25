@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "scripts": {
     "build:images": "gulp images",
-    "deploy": "webpack -p & git push heroku master",
+    "deploy": "git push heroku master",
+    "prod": "gulp clean && gulp build && webpack -p",
     "start": "gulp clean && gulp build && gulp"
   },
   "author": "Brandon Patterson",
