@@ -2,7 +2,7 @@
   "products": [
     {
       "title": "Emoji Tac Toe",
-      "link": "https://github.com/brandnpatterson/flutter",
+      "link": "https://emoji-tac-toe.surge.sh",
       "filepath": "/images/emoji-tac-toe.png",
       "alt": "Emoji Tac Toe",
       "about": "JavaScript ES6 Modules"

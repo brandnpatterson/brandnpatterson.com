@@ -64,10 +64,10 @@ gulp.task('styles', () => {
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(prefix('last 2 versions'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/css'))
+    .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('watch', () => {
-  gulp.watch('assets/js/**/*', ['scripts', reload]);
+  gulp.watch('assets/js/**/*', ['scripts', reload])
   gulp.watch('assets/sass/**/*', ['styles', reload]);
 });
