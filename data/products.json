@@ -1,8 +1,15 @@
 {
   "products": [
     {
-      "title": "Flutter",
+      "title": "Emoji Tac Toe",
       "link": "https://github.com/brandnpatterson/flutter",
+      "filepath": "/images/emoji-tac-toe.png",
+      "alt": "Emoji Tac Toe",
+      "about": "JavaScript ES6 Modules"
+    },
+    {
+      "title": "Flutter",
+      "link": "https://flutter-bp.herokuapp.com",
       "filepath": "/images/flutter.png",
       "alt": "Flutter",
       "about": "PHP Slim - Twig - Illuminate - JavaScript"
