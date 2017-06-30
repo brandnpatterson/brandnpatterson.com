@@ -2,11 +2,16 @@
 	padding: 0 0 100px 0
 	background: $teal
 	.flex-container
+		+mediaQuery($medium)
+			flex-direction: row
+			flex-wrap: wrap
 		.product-img
-			width: 90%
+			width: 100%
 			height: auto
 			padding: 5%
 			&:hover
 				opacity: 0.8
 			+mediaQuery($medium)
 				width: 400px
+		p
+			text-align: center

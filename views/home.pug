@@ -16,9 +16,10 @@ block content
     .flex-container
       each product in products
         .flex-container
-          a.flex-container(href=`${product.link}`)
-            img.product-img(src=`${product.filepath}`, alt=`${product.alt}`)
-          p= product.about
+          div
+            a(href=`${product.link}`)
+              img.product-img(src=`${product.filepath}`, alt=`${product.alt}`)
+            p= product.about
   #about.section
     h2 About
     p My name is Brandon Patterson and I'm a Full Stack Developer. These are some of my favorite technolgies to use in order to build applications.
