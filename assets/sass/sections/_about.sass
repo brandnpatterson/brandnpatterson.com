@@ -5,12 +5,14 @@
 		flex-direction: row
 		flex-wrap: wrap
 		margin: 0 auto
-		width: 80%
+		width: 75%
 		img
 			border-radius: 10px
-			margin: 2% auto
-			width: 180px
+			margin: 10px
+			width: 150px
 			height: auto
+			+mediaQuery($small)
+				width: 100px
 			&:hover
 				opacity: 0.8
 	hr
