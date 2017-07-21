@@ -5,10 +5,12 @@
 		flex-direction: row
 		flex-wrap: wrap
 		margin: 0 auto
-		width: 75%
+		width: 80%
+		+mediaQuery($large)
+			width: 45%
 		img
 			border-radius: 10px
-			margin: 10px
+			margin: 20px
 			width: 150px
 			height: auto
 			+mediaQuery($small)
