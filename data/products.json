@@ -1,6 +1,13 @@
 {
   "products": [
     {
+      "title": "Hair Industry Salon",
+      "link": "http://hairindustrysalon.herokuapp.com",
+      "filepath": "/images/hairindustrysalon.png",
+      "alt": "Hair Industry Salon",
+      "about": "Express - Handlebars - jQuery"
+    },
+    {
       "title": "Desmorious",
       "link": "http://desmorious.herokuapp.com",
       "filepath": "/images/desmorious.png",
