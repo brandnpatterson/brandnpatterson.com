@@ -1,6 +1,13 @@
 {
   "products": [
     {
+      "title": "Desmorious",
+      "link": "http://desmorious.herokuapp.com",
+      "filepath": "/images/desmorious.png",
+      "alt": "Desmorious",
+      "about": "Node - Express - MongoDBd"
+    },
+    {
       "title": "Emoji Tac Toe",
       "link": "https://emoji-tac-toe.surge.sh",
       "filepath": "/images/emoji-tac-toe.png",
@@ -27,13 +34,6 @@
       "filepath": "/images/goldilox.png",
       "alt": "Goldilox Designs",
       "about": "React - React Router - Webpack"
-    },
-    {
-      "title": "Jaime Quach",
-      "link": "http://jaime-quach.surge.sh",
-      "filepath": "/images/jaime-quach.png",
-      "alt": "Jaime Quach",
-      "about": "Pug - jQuery - Instafeed"
     }
   ]
 }
