@@ -66,18 +66,18 @@
 	'use strict';
 
 	/**
-	 * Gives the home-icon a new class depending on device width
+	 * Gives the landing-icon a new class depending on device width
 	**/
 
 	!function iconMove() {
 	  // CacheDOM
-	  var homeIcon = document.querySelector('.home-icon'),
+	  var landingIcon = document.querySelector('.landing-icon'),
 	      nav = document.querySelector('nav');
 	  // General rules for any device
 	  function iconMoveGeneral() {
 	    if (window.scrollY < 300) {
-	      homeIcon.classList.remove('scroll-icon_deskt', 'scroll-icon_iPad', 'scroll-icon_iPhone');
-	      homeIcon.classList.add('home-icon');
+	      landingIcon.classList.remove('scroll-icon_deskt', 'scroll-icon_iPad', 'scroll-icon_iPhone');
+	      landingIcon.classList.add('landing-icon');
 	      nav.classList.remove('slide-nav_iPhone', 'slide-nav_iPad');
 	    }
 	  }
@@ -85,14 +85,14 @@
 	  function iconMoveDesktop() {
 	    // 1025 = 1040px
 	    if (window.scrollY > 300 && window.innerWidth >= 1025) {
-	      homeIcon.classList.add('scroll-icon_deskt');
+	      landingIcon.classList.add('scroll-icon_deskt');
 	    }
 	  }
 	  // Rules for iPad
 	  function iconMoveiPad() {
 	    if (window.scrollY > 300 && window.innerWidth < 1025 && window.innerWidth > 505) {
-	      homeIcon.classList.remove('home-icon');
-	      homeIcon.classList.add('scroll-icon_iPad');
+	      landingIcon.classList.remove('landing-icon');
+	      landingIcon.classList.add('scroll-icon_iPad');
 	      nav.classList.add('slide-nav_iPad');
 	    }
 	  }
@@ -100,8 +100,8 @@
 	  function iconMoveiPhone() {
 	    // 625 = 640px
 	    if (window.scrollY > 300 && window.innerWidth < 505) {
-	      homeIcon.classList.remove('home-icon');
-	      homeIcon.classList.add('scroll-icon_iPhone');
+	      landingIcon.classList.remove('landing-icon');
+	      landingIcon.classList.add('scroll-icon_iPhone');
 	      nav.classList.add('slide-nav_iPhone');
 	    }
 	  }
@@ -130,47 +130,38 @@
 
 	!function navColorScroll() {
 	  // CacheDOM
-	  var $about = (0, _jquery2.default)('#about'),
-	      $body = (0, _jquery2.default)('body'),
+	  var $resume = (0, _jquery2.default)('#resume'),
 	      $colorActive = '#333',
 	      $colorNav = '#26595C',
 	      $contact = (0, _jquery2.default)('#contact'),
-	      $home = (0, _jquery2.default)('#home'),
+	      $landing = (0, _jquery2.default)('#landing'),
 	      $nav = (0, _jquery2.default)('nav'),
-	      $navAbout = (0, _jquery2.default)('#nav-about'),
-	      $navContact = (0, _jquery2.default)('#nav-contact'),
-	      $navHome = (0, _jquery2.default)('#nav-home'),
-	      $navPort = (0, _jquery2.default)('#nav-port'),
+	      $navAbout = (0, _jquery2.default)('.nav-resume'),
+	      $navContact = (0, _jquery2.default)('.nav-contact'),
+	      $navLanding = (0, _jquery2.default)('.nav-landing'),
+	      $navPort = (0, _jquery2.default)('.nav-port'),
 	      $portfolio = (0, _jquery2.default)('#portfolio'),
 	      $window = (0, _jquery2.default)(window);
-	  // Scroll offset from the top of the href attr of whatever is clicked
-	  function navScroll(e) {
-	    var scrollHref = (0, _jquery2.default)(e.target).attr('href');
-	    $body.animate({
-	      scrollTop: (0, _jquery2.default)(scrollHref).offset().top
-	    }, 500);
+	  // Give nav anchors the active class depending on distance from top
+	  function colorScroll(e) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $landing.position().top) {
+	      active($navLanding);
+	    }
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top - 200) {
+	      active($navPort);
+	    }
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $resume.position().top - 100) {
+	      active($navAbout);
+	    }
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top) {
+	      active($navContact);
+	    }
 	  }
 	  // Used to make any activeLink the active color
 	  function active(activeLink) {
 	    activeLink.css('background', $colorActive).siblings().css('background', $colorNav);
 	  }
-	  // Give nav anchors the active class depending on distance from top
-	  function colorScroll(e) {
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $home.position().top) {
-	      active($navHome);
-	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top) {
-	      active($navPort);
-	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $about.position().top - 100) {
-	      active($navAbout);
-	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top - 200) {
-	      active($navContact);
-	    }
-	  }
 	  // Events
-	  $nav.on('click', 'a', navScroll);
 	  $window.on('scroll', colorScroll);
 	}(); /**
 	      * Changes color of nav on scroll & when it's clicked, body animates to the href of that element
@@ -10416,7 +10407,7 @@
 
 	!function navTitleToggle() {
 	  // CacheDOM
-	  var navTitle = document.getElementById('nav-title');
+	  var navTitle = document.querySelector('.nav-title');
 	  // Hide or show nav-title
 	  function navHideShow() {
 	    if (window.scrollY > 300 && window.innerWidth >= 1025) {

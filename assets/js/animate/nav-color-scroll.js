@@ -5,49 +5,40 @@
 // Require jquery for this file
 import $ from 'jquery';
 
-!function navColorScroll() {
+!function navColorScroll () {
   // CacheDOM
-  const $about       = $('#about'),
-        $body        = $('body'),
+  const $resume       = $('#resume'),
         $colorActive = '#333',
         $colorNav    = '#26595C',
         $contact     = $('#contact'),
-        $home        = $('#home'),
+        $landing     = $('#landing'),
         $nav         = $('nav'),
-        $navAbout    = $('#nav-about'),
-        $navContact  = $('#nav-contact'),
-        $navHome     = $('#nav-home'),
-        $navPort     = $('#nav-port'),
+        $navAbout    = $('.nav-resume'),
+        $navContact  = $('.nav-contact'),
+        $navLanding  = $('.nav-landing'),
+        $navPort     = $('.nav-port'),
         $portfolio   = $('#portfolio'),
         $window      = $(window);
-  // Scroll offset from the top of the href attr of whatever is clicked
-  function navScroll(e) {
-    const scrollHref = $(e.target).attr('href');
-    $body.animate({
-      scrollTop: $(scrollHref).offset().top
-    }, 500);
-  }
-  // Used to make any activeLink the active color
-  function active(activeLink) {
-    activeLink.css('background', $colorActive)
-    .siblings().css('background', $colorNav);
-  }
   // Give nav anchors the active class depending on distance from top
-  function colorScroll(e) {
-    if ($(e.target).scrollTop() >= $home.position().top) {
-      active($navHome);
+  function colorScroll (e) {
+    if ($(e.target).scrollTop() >= $landing.position().top) {
+      active($navLanding);
     }
-    if ($(e.target).scrollTop() >= $portfolio.position().top) {
+    if ($(e.target).scrollTop() >= $portfolio.position().top - 200) {
       active($navPort);
     }
-    if ($(e.target).scrollTop() >= $about.position().top - 100) {
+    if ($(e.target).scrollTop() >= $resume.position().top - 100) {
       active($navAbout);
     }
-    if ($(e.target).scrollTop() >= $contact.position().top - 200) {
+    if ($(e.target).scrollTop() >= $contact.position().top) {
       active($navContact);
     }
   }
+  // Used to make any activeLink the active color
+  function active (activeLink) {
+    activeLink.css('background', $colorActive)
+    .siblings().css('background', $colorNav);
+  }
   // Events
-  $nav.on('click', 'a', navScroll);
   $window.on('scroll', colorScroll);
 }();

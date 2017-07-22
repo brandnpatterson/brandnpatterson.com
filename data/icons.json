@@ -6,34 +6,24 @@
       "alt": "JavaScript"
     },
     {
-      "title": "React",
-      "filepath": "/images/about-icons/react.png",
-      "alt": "React"
-    },
-    {
-      "title": "Webpack",
-      "filepath": "/images/about-icons/webpack.jpeg",
-      "alt": "Webpack"
-    },
-    {
       "title": "Node",
-      "filepath": "/images/about-icons/node.jpg",
+      "filepath": "/images/about-icons/node.png",
       "alt": "Node"
     },
     {
-      "title": "MongoDB",
-      "filepath": "/images/about-icons/mongodb.png",
-      "alt": "MongoDB"
+      "title": "CSS3",
+      "filepath": "/images/about-icons/css3.png",
+      "alt": "CSS3"
     },
     {
-      "title": "PHP",
-      "filepath": "/images/about-icons/php.png",
-      "alt": "PHP"
+      "title": "HTML5",
+      "filepath": "/images/about-icons/html5.png",
+      "alt": "HTML5"
     },
     {
-      "title": "Slim",
-      "filepath": "/images/about-icons/slim.jpeg",
-      "alt": "Slim"
+      "title": "AJAX",
+      "filepath": "/images/about-icons/ajax.png",
+      "alt": "AJAX"
     },
     {
       "title": "jQuery",
@@ -41,9 +31,9 @@
       "alt": "jQuery"
     },
     {
-      "title": "Git",
-      "filepath": "/images/about-icons/git.png",
-      "alt": "Git"
+      "title": "Sass",
+      "filepath": "/images/about-icons/sass.png",
+      "alt": "Sass"
     },
     {
       "title": "Pug",
@@ -51,14 +41,24 @@
       "alt": "Pug"
     },
     {
-      "title": "Sass",
-      "filepath": "/images/about-icons/sass.png",
-      "alt": "Sass"
+      "title": "Webpack",
+      "filepath": "/images/about-icons/webpack.svg",
+      "alt": "Webpack"
     },
     {
-      "title": "Composer",
-      "filepath": "/images/about-icons/composer.jpeg",
-      "alt": "Composer"
+      "title": "Gulp",
+      "filepath": "/images/about-icons/gulp.png",
+      "alt": "Gulp"
+    },
+    {
+      "title": "MongoDB",
+      "filepath": "/images/about-icons/mongodb.png",
+      "alt": "MongoDB"
+    },
+    {
+      "title": "Git",
+      "filepath": "/images/about-icons/git.png",
+      "alt": "Git"
     }
   ]
 }

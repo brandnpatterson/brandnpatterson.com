@@ -1,17 +1,16 @@
-@import 'utils/_normalize';
-@import 'basics/_vars';
-@import 'basics/_basics';
-@import 'basics/_mixins';
+@import 'utils/normalize';
+@import 'basics/vars';
+@import 'basics/basics';
+@import 'basics/mixins';
 
-@import 'sections/_nav';
-@import 'sections/_home';
-@import 'sections/_portfolio';
-@import 'sections/_about';
-@import 'sections/_contact';
-@import 'sections/_footer';
+@import 'sections/nav';
+@import 'sections/landing';
+@import 'sections/portfolio';
+@import 'sections/resume';
+@import 'sections/footer';
 
-@import 'components/_home-init';
-@import 'components/_keyframes';
-@import 'components/_message';
-@import 'components/_slide-nav';
-@import 'components/_scroll-icon';
+@import 'components/landing-init';
+@import 'components/keyframes';
+@import 'components/message';
+@import 'components/slide-nav';
+@import 'components/scroll-icon';

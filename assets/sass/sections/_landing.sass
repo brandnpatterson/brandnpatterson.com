@@ -1,22 +1,20 @@
-#home
+#landing
 	background: $darker
 	align-items: center
 	display: flex
 	flex-direction: column
 	padding-top: 150px
-	padding-bottom: 200px
+	padding-bottom: 100px
 	hr
 		width: 200px
-	+mediaQuery($small)
-		h2
-			font-size: 20px
+	h2
+		font-size: 30px
 	+mediaQuery($medium)
 		hr
-			width: 350px
-	.home-icon
-		padding: 0
+			width: 450px
+	.landing-icon
 		margin: 0 auto
-		border-radius: 50%
+		border-radius: 10%
 		display: block
 		width: 160px
 		height: auto
@@ -26,7 +24,7 @@
 				width: 100px
 		+mediaQuery($large)
 			width: 260px
-.home-title
+.landing-title
 	margin-top: 130px
 	margin-bottom: 130px
 	text-align: center
@@ -34,3 +32,19 @@
 	display: none
 .message-bubble p
 	margin: 0 auto
+.tech-icon
+	.flex-container
+		flex-direction: row
+		flex-wrap: wrap
+		margin: 0 auto
+		width: 100%
+		+mediaQuery($medium)
+			max-width: 600px
+		img
+			margin: 20px
+			width: 100px
+			height: auto
+			+mediaQuery($small)
+				width: 100px
+			&:hover
+				opacity: 0.8

@@ -1,3 +1,32 @@
 extends layout
 
 block content
+  #landing
+    .greeting
+      a(href='#portfolio')
+        .message-bubble
+          p.message Hey! Thanks for visiting!
+          p.message-two Welcome to my Portfolio!
+        img.landing-icon(src='images/me.jpg', alt='Brandon Patterson')
+    .landing-title
+        h2 Brandon Patterson
+        hr
+        h2 Web Developer
+    .tech-icon
+      .flex-container
+        each icon in icons
+          img(src=`${icon.filepath}`, alt=`${icon.alt}`) 
+  #portfolio
+    h2 Portfolio
+    .flex-container
+      each product in products
+        .flex-container
+          div
+            a(href=`${product.link}`)
+              img.product-img(src=`${product.filepath}`, alt=`${product.alt}`)
+            p= product.about    
+  #resume
+    h2 My Updated Resume
+    a(href='images/brandon-patterson-resume-2017.pdf', download='')
+      img(src='images/brandon-patterson-resume-2017.png')
+  
