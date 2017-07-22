@@ -2,63 +2,83 @@
   "icons": [
     {
       "title": "JavaScript",
-      "filepath": "/images/about-icons/js.png",
+      "filepath": "/images/tech-icons/js.png",
       "alt": "JavaScript"
     },
     {
       "title": "Node",
-      "filepath": "/images/about-icons/node.png",
+      "filepath": "/images/tech-icons/node.png",
       "alt": "Node"
     },
     {
       "title": "CSS3",
-      "filepath": "/images/about-icons/css3.png",
+      "filepath": "/images/tech-icons/css3.png",
       "alt": "CSS3"
     },
     {
       "title": "HTML5",
-      "filepath": "/images/about-icons/html5.png",
+      "filepath": "/images/tech-icons/html5.png",
       "alt": "HTML5"
     },
     {
-      "title": "AJAX",
-      "filepath": "/images/about-icons/ajax.png",
-      "alt": "AJAX"
-    },
-    {
-      "title": "jQuery",
-      "filepath": "/images/about-icons/jquery.png",
-      "alt": "jQuery"
-    },
-    {
-      "title": "Sass",
-      "filepath": "/images/about-icons/sass.png",
-      "alt": "Sass"
-    },
-    {
-      "title": "Pug",
-      "filepath": "/images/about-icons/pug.svg",
-      "alt": "Pug"
+      "title": "React",
+      "filepath": "/images/tech-icons/react.svg",
+      "alt": "React"
     },
     {
       "title": "Webpack",
-      "filepath": "/images/about-icons/webpack.svg",
+      "filepath": "/images/tech-icons/webpack.svg",
       "alt": "Webpack"
     },
     {
+      "title": "Pug",
+      "filepath": "/images/tech-icons/pug.svg",
+      "alt": "Pug"
+    },
+    {
+      "title": "Sass",
+      "filepath": "/images/tech-icons/sass.png",
+      "alt": "Sass"
+    },
+    {
+      "title": "jQuery",
+      "filepath": "/images/tech-icons/jquery.png",
+      "alt": "jQuery"
+    },
+    {
+      "title": "AJAX",
+      "filepath": "/images/tech-icons/ajax.png",
+      "alt": "AJAX"
+    },
+    {
+      "title": "Git",
+      "filepath": "/images/tech-icons/git.png",
+      "alt": "Git"
+    },
+    {
       "title": "Gulp",
-      "filepath": "/images/about-icons/gulp.png",
+      "filepath": "/images/tech-icons/gulp.png",
       "alt": "Gulp"
     },
     {
       "title": "MongoDB",
-      "filepath": "/images/about-icons/mongodb.png",
+      "filepath": "/images/tech-icons/mongodb.png",
       "alt": "MongoDB"
     },
     {
-      "title": "Git",
-      "filepath": "/images/about-icons/git.png",
-      "alt": "Git"
+      "title": "MySQL",
+      "filepath": "/images/tech-icons/mysql.png",
+      "alt": "MySQL"
+    },
+    {
+      "title": "PHP",
+      "filepath": "/images/tech-icons/php.png",
+      "alt": "PHP"
+    },
+    {
+      "title": "Slim",
+      "filepath": "/images/tech-icons/slim.png",
+      "alt": "Slim"
     }
   ]
 }

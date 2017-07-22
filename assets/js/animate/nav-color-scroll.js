@@ -19,6 +19,11 @@ import $ from 'jquery';
         $navPort     = $('.nav-port'),
         $portfolio   = $('#portfolio'),
         $window      = $(window);
+  // Used to make any activeLink the active color
+  function active (activeLink) {
+    activeLink.css('background', $colorActive)
+    .siblings().css('background', $colorNav);
+  }
   // Give nav anchors the active class depending on distance from top
   function colorScroll (e) {
     if ($(e.target).scrollTop() >= $landing.position().top) {
@@ -30,14 +35,9 @@ import $ from 'jquery';
     if ($(e.target).scrollTop() >= $resume.position().top - 100) {
       active($navAbout);
     }
-    if ($(e.target).scrollTop() >= $contact.position().top) {
+    if ($(e.target).scrollTop() >= $contact.position().top - 100) {
       active($navContact);
     }
-  }
-  // Used to make any activeLink the active color
-  function active (activeLink) {
-    activeLink.css('background', $colorActive)
-    .siblings().css('background', $colorNav);
   }
   // Events
   $window.on('scroll', colorScroll);

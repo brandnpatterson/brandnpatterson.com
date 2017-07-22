@@ -142,6 +142,10 @@
 	      $navPort = (0, _jquery2.default)('.nav-port'),
 	      $portfolio = (0, _jquery2.default)('#portfolio'),
 	      $window = (0, _jquery2.default)(window);
+	  // Used to make any activeLink the active color
+	  function active(activeLink) {
+	    activeLink.css('background', $colorActive).siblings().css('background', $colorNav);
+	  }
 	  // Give nav anchors the active class depending on distance from top
 	  function colorScroll(e) {
 	    if ((0, _jquery2.default)(e.target).scrollTop() >= $landing.position().top) {
@@ -153,13 +157,9 @@
 	    if ((0, _jquery2.default)(e.target).scrollTop() >= $resume.position().top - 100) {
 	      active($navAbout);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top - 100) {
 	      active($navContact);
 	    }
-	  }
-	  // Used to make any activeLink the active color
-	  function active(activeLink) {
-	    activeLink.css('background', $colorActive).siblings().css('background', $colorNav);
 	  }
 	  // Events
 	  $window.on('scroll', colorScroll);
