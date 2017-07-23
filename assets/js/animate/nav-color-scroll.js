@@ -7,13 +7,12 @@ import $ from 'jquery';
 
 !function navColorScroll () {
   // CacheDOM
-  const $resume       = $('#resume'),
-        $colorActive = '#333',
+  const $colorActive = '#333',
         $colorNav    = '#26595C',
         $contact     = $('#contact'),
         $landing     = $('#landing'),
         $nav         = $('nav'),
-        $navAbout    = $('.nav-resume'),
+        $navAbout    = $('.nav-contact'),
         $navContact  = $('.nav-contact'),
         $navLanding  = $('.nav-landing'),
         $navPort     = $('.nav-port'),
@@ -32,11 +31,8 @@ import $ from 'jquery';
     if ($(e.target).scrollTop() >= $portfolio.position().top - 200) {
       active($navPort);
     }
-    if ($(e.target).scrollTop() >= $resume.position().top - 100) {
-      active($navAbout);
-    }
     if ($(e.target).scrollTop() >= $contact.position().top - 100) {
-      active($navContact);
+      active($navAbout);
     }
   }
   // Events

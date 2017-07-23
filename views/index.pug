@@ -15,7 +15,7 @@ block content
     .tech-icon
       .flex-container
         each icon in icons
-          img(src=`${icon.filepath}`, alt=`${icon.alt}`) 
+          img(src=`${icon.filepath}`, alt=`${icon.alt}`)
   #portfolio
     .flex-container
       each product in products
@@ -24,8 +24,13 @@ block content
             a(href=`${product.link}`)
               img.product-img(src=`${product.filepath}`, alt=`${product.alt}`)
             p= product.about    
-  #resume
-    h2 My Updated Resume
+  #contact
+    .flex-container
+      a(href='mailto:someone@example.com?Subject=Hey%20Brandon!') 
+        h2 brandnpatterson@gmail.com
+      a(href='tel:979-236-4789')
+        h2 (979) 236-4789
+    br
     a(href='images/brandon-patterson-resume-2017.pdf', download='')
       img(src='images/brandon-patterson-resume-2017.png')
   

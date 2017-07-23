@@ -130,13 +130,12 @@
 
 	!function navColorScroll() {
 	  // CacheDOM
-	  var $resume = (0, _jquery2.default)('#resume'),
-	      $colorActive = '#333',
+	  var $colorActive = '#333',
 	      $colorNav = '#26595C',
 	      $contact = (0, _jquery2.default)('#contact'),
 	      $landing = (0, _jquery2.default)('#landing'),
 	      $nav = (0, _jquery2.default)('nav'),
-	      $navAbout = (0, _jquery2.default)('.nav-resume'),
+	      $navAbout = (0, _jquery2.default)('.nav-contact'),
 	      $navContact = (0, _jquery2.default)('.nav-contact'),
 	      $navLanding = (0, _jquery2.default)('.nav-landing'),
 	      $navPort = (0, _jquery2.default)('.nav-port'),
@@ -154,11 +153,8 @@
 	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top - 200) {
 	      active($navPort);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $resume.position().top - 100) {
-	      active($navAbout);
-	    }
 	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top - 100) {
-	      active($navContact);
+	      active($navAbout);
 	    }
 	  }
 	  // Events
