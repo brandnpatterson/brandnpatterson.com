@@ -6,10 +6,14 @@
 	.flex-container
 		flex-direction: row
 		margin: 0 auto
-		max-width: 70%
+		max-width: 100%
 		padding: 100px 0 0
+		+mediaQuery($medium)
+			max-width: 70%
 	h2
-		font-size: 26px
+		font-size: 16px
+		+mediaQuery($medium)
+			font-size: 26px
 	img
 		margin: 30px auto
 		max-width: 90%
