@@ -39,9 +39,11 @@
         width: 100px
         height: 100px
         +mediaQuery($medium)
-          padding: 10px 30px 30px
+          margin-top: 10px
       p
         font-size: 16px
-        max-width: 90%
+        max-width: 80%
+        +mediaQuery($medium)
+          max-width: 50%
       a
         text-decoration: underline
