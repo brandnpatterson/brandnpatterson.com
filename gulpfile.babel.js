@@ -1,7 +1,6 @@
 import gulp       from 'gulp';
 import del        from 'del';
 import eslint     from 'gulp-eslint';
-import imagemin   from 'gulp-imagemin';
 import nodemon    from 'gulp-nodemon';
 import prefix     from 'gulp-autoprefixer';
 import sass       from 'gulp-sass';
@@ -14,15 +13,8 @@ var reload = sync.reload;
 gulp.task('build', ['scripts', 'styles']);
 
 gulp.task('clean', del.bind(null, ['public/css', 'public/js'], {read: false}));
-gulp.task('clean:images', del.bind(null, ['public/images'], {read: false}));
 
 gulp.task('default', ['server', 'watch']);
-
-gulp.task('images', ['clean:images'], () => {
-  return gulp.src('assets/images/**/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('public/images'));
-});
 
 gulp.task('lint', () => {
   return gulp.src(['*/**/*.js', '!node_modules/*', '!public/includes/*'])
@@ -44,7 +36,7 @@ gulp.task('nodemon', (cb) => {
 });
 
 gulp.task('scripts', () => {
-  return gulp.src(['assets/js/index.js'])
+  return gulp.src(['src/js/index.js'])
     .pipe(webpack( require('./webpack.config.js') ))
     .pipe(gulp.dest('public/js'));
 });
@@ -59,7 +51,7 @@ gulp.task('server', ['nodemon'], () => {
 });
 
 gulp.task('styles', () => {
-  return gulp.src('assets/sass/style.scss')
+  return gulp.src('src/sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(prefix('last 2 versions'))
@@ -68,6 +60,6 @@ gulp.task('styles', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch('assets/js/**/*', ['scripts', reload])
-  gulp.watch('assets/sass/**/*', ['styles', reload]);
+  gulp.watch('src/js/**/*', ['scripts', reload])
+  gulp.watch('src/sass/**/*', ['styles', reload]);
 });

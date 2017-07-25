@@ -1,0 +1,47 @@
+#about
+  padding: 100px 20px
+  background: $darker
+  hr
+    width: 250px
+    +mediaQuery($medium)
+      width: 450px
+    +mediaQuery($large)
+      width: 600px
+  p
+    font-size: 20px
+    text-align: justify
+    +mediaQuery($medium)
+      padding-top: 30px
+  h2
+    margin: 50px
+  .flex-container
+    text-align: justify
+    margin: 0 auto
+    max-width: 100%
+    +mediaQuery($medium)
+      max-width: 90%
+    &__inner--league
+      +mediaQuery($medium)
+        p
+          padding-right: 50px
+    &__inner--league,
+    &__inner--guitar
+      display: flex
+      margin: 100px 0
+      flex-direction: column-reverse
+      +mediaQuery($medium)
+        flex-direction: row
+        max-width: 70%
+      +mediaQuery($large)
+        max-width: 50%
+      img
+        margin: 2em auto
+        width: 100px
+        height: 100px
+        +mediaQuery($medium)
+          padding: 10px 30px 30px
+      p
+        font-size: 16px
+        max-width: 90%
+      a
+        text-decoration: underline

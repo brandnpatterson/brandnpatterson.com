@@ -24,7 +24,21 @@ block content
           div
             a(href=`${product.link}`)
               img.product-img(src=`${product.filepath}`, alt=`${product.alt}`)
-            p= product.about    
+            p= product.about
+  #about
+    h2 About Me
+    .flex-container
+      p My name is Brandon Patterson and I'm a freelance Full Stack Web Developer available for full time hire. I'm a graduate of Oral Roberts University with a Bachelors Degree in Music Composition & Technology.
+      .flex-container__inner--league
+        p When I'm not building apps, I like to play League of Legends. I'm currently Gold V (Highest Platinum IV)
+        img(src='images/league-gold.png' alt='League of Legends Gold V')
+      hr
+      .flex-container__inner--guitar
+        p I also play acoustic, bass, and I love to sing. I play in my church's youth band at 
+          |
+          a(href='http://www.myflc.com/') Family Life Church
+          |in Lake Jackson, TX, teach music lessons, and like to write songs almost as much as I like writing apps
+        img(src='images/guitar.jpg' alt='Brandon Patterson playing the guitar')
   #contact
     .flex-container
       a(href='mailto:someone@example.com?Subject=Hey%20Brandon!') 
@@ -32,6 +46,6 @@ block content
       a(href='tel:979-236-4789')
         h2 (979) 236-4789
     br
-    a(href='images/brandon-patterson-resume-2017.pdf', download='')
-      img(src='images/brandon-patterson-resume-2017.png')
+    a(href='images/BrandonPattersonResume.pdf', download='')
+      img(src='images/BrandonPattersonResume.png')
   
