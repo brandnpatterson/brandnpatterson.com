@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.1",
+  "version": "2.2.1",
   "scripts": {
     "build:images": "gulp images",
     "deploy": "webpack -p && git push heroku master && git push",
