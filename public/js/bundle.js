@@ -148,16 +148,16 @@
 	  }
 	  // Give nav anchors the active class depending on distance from top
 	  function colorScroll(e) {
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $landing.position().top + 100) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $landing.position().top) {
 	      active($navLanding);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top + 100) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top - 200) {
 	      active($navPort);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $about.position().top + 100) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $about.position().top - 200) {
 	      active($navAbout);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top + 100) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top - 500) {
 	      active($navContact);
 	    }
 	  }

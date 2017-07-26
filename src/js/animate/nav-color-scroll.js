@@ -26,16 +26,16 @@ import $ from 'jquery';
   }
   // Give nav anchors the active class depending on distance from top
   function colorScroll (e) {
-    if ($(e.target).scrollTop() >= $landing.position().top + 100) {
+    if ($(e.target).scrollTop() >= $landing.position().top) {
       active($navLanding);
     }
-    if ($(e.target).scrollTop() >= $portfolio.position().top + 100) {
+    if ($(e.target).scrollTop() >= $portfolio.position().top - 200) {
       active($navPort);
     }
-    if ($(e.target).scrollTop() >= $about.position().top + 100) {
+    if ($(e.target).scrollTop() >= $about.position().top - 200) {
       active($navAbout);
     }
-    if ($(e.target).scrollTop() >= $contact.position().top + 100) {
+    if ($(e.target).scrollTop() >= $contact.position().top - 500) {
       active($navContact);
     }
   }
