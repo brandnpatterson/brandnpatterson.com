@@ -130,12 +130,13 @@
 
 	!function navColorScroll() {
 	  // CacheDOM
-	  var $colorActive = '#333',
+	  var $about = (0, _jquery2.default)('#about'),
+	      $colorActive = '#333',
 	      $colorNav = '#26595C',
 	      $contact = (0, _jquery2.default)('#contact'),
 	      $landing = (0, _jquery2.default)('#landing'),
 	      $nav = (0, _jquery2.default)('nav'),
-	      $navAbout = (0, _jquery2.default)('.nav-contact'),
+	      $navAbout = (0, _jquery2.default)('.nav-about'),
 	      $navContact = (0, _jquery2.default)('.nav-contact'),
 	      $navLanding = (0, _jquery2.default)('.nav-landing'),
 	      $navPort = (0, _jquery2.default)('.nav-port'),
@@ -147,14 +148,17 @@
 	  }
 	  // Give nav anchors the active class depending on distance from top
 	  function colorScroll(e) {
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $landing.position().top) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $landing.position().top + 100) {
 	      active($navLanding);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top - 200) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top + 100) {
 	      active($navPort);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top - 100) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $about.position().top + 100) {
 	      active($navAbout);
+	    }
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top + 100) {
+	      active($navContact);
 	    }
 	  }
 	  // Events

@@ -7,12 +7,13 @@ import $ from 'jquery';
 
 !function navColorScroll () {
   // CacheDOM
-  const $colorActive = '#333',
+  const $about       = $('#about'),
+        $colorActive = '#333',
         $colorNav    = '#26595C',
         $contact     = $('#contact'),
         $landing     = $('#landing'),
         $nav         = $('nav'),
-        $navAbout    = $('.nav-contact'),
+        $navAbout    = $('.nav-about'),
         $navContact  = $('.nav-contact'),
         $navLanding  = $('.nav-landing'),
         $navPort     = $('.nav-port'),
@@ -25,14 +26,17 @@ import $ from 'jquery';
   }
   // Give nav anchors the active class depending on distance from top
   function colorScroll (e) {
-    if ($(e.target).scrollTop() >= $landing.position().top) {
+    if ($(e.target).scrollTop() >= $landing.position().top + 100) {
       active($navLanding);
     }
-    if ($(e.target).scrollTop() >= $portfolio.position().top - 200) {
+    if ($(e.target).scrollTop() >= $portfolio.position().top + 100) {
       active($navPort);
     }
-    if ($(e.target).scrollTop() >= $contact.position().top - 100) {
+    if ($(e.target).scrollTop() >= $about.position().top + 100) {
       active($navAbout);
+    }
+    if ($(e.target).scrollTop() >= $contact.position().top + 100) {
+      active($navContact);
     }
   }
   // Events
