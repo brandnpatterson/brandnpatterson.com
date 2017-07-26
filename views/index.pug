@@ -29,7 +29,8 @@ block content
             p= product.about
   #about.section
     h2 About
-    p My name is Brandon Patterson and I'm a Full Stack Web Developer and I'm also a musician. I enjoy collaborating with people and making amazing things happen!
+    each item in about
+      p= item.paragraph
   #contact.section
     h2 Contact
     .flex-container
