@@ -151,10 +151,10 @@
 	    if ((0, _jquery2.default)(e.target).scrollTop() >= $landing.position().top) {
 	      active($navLanding);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top - 200) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $portfolio.position().top - 500) {
 	      active($navPort);
 	    }
-	    if ((0, _jquery2.default)(e.target).scrollTop() >= $about.position().top - 200) {
+	    if ((0, _jquery2.default)(e.target).scrollTop() >= $about.position().top - 500) {
 	      active($navAbout);
 	    }
 	    if ((0, _jquery2.default)(e.target).scrollTop() >= $contact.position().top - 500) {

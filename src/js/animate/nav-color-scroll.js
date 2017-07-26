@@ -29,10 +29,10 @@ import $ from 'jquery';
     if ($(e.target).scrollTop() >= $landing.position().top) {
       active($navLanding);
     }
-    if ($(e.target).scrollTop() >= $portfolio.position().top - 200) {
+    if ($(e.target).scrollTop() >= $portfolio.position().top - 500) {
       active($navPort);
     }
-    if ($(e.target).scrollTop() >= $about.position().top - 200) {
+    if ($(e.target).scrollTop() >= $about.position().top - 500) {
       active($navAbout);
     }
     if ($(e.target).scrollTop() >= $contact.position().top - 500) {
