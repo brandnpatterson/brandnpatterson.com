@@ -11,14 +11,14 @@
       "alt": "Node"
     },
     {
-      "title": "CSS3",
-      "filepath": "/images/tech-icons/css3.png",
-      "alt": "CSS3"
-    },
-    {
       "title": "HTML5",
       "filepath": "/images/tech-icons/html5.png",
       "alt": "HTML5"
+    },
+    {
+      "title": "CSS3",
+      "filepath": "/images/tech-icons/css3.png",
+      "alt": "CSS3"
     },
     {
       "title": "React",
