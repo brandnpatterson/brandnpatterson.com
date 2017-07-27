@@ -26,8 +26,8 @@ gulp.task('lint', () => {
 gulp.task('nodemon', (cb) => {
 	var started = false;
 	return nodemon({
-		script: 'app.js'
-	}).on('start', function () {
+		script: 'app.js',
+	}).on('start', () => {
 		if (!started) {
 			cb();
 			started = true;
@@ -46,7 +46,8 @@ gulp.task('server', ['nodemon'], () => {
     proxy: 'http://localhost:8887',
     notify: false,
     files: 'public/**/*.*',
-    port: 8888
+    port: 8888,
+    ext: '.pug'
   });
 });
 
@@ -62,4 +63,6 @@ gulp.task('styles', () => {
 gulp.task('watch', () => {
   gulp.watch('src/js/**/*', ['scripts', reload])
   gulp.watch('src/sass/**/*', ['styles', reload]);
+  gulp.watch('views/*.pug', reload);
+  gulp.watch('views/components/*.pug', reload);
 });
