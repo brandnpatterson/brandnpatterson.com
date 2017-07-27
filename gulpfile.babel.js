@@ -1,6 +1,5 @@
 import gulp       from 'gulp';
 import del        from 'del';
-import eslint     from 'gulp-eslint';
 import nodemon    from 'gulp-nodemon';
 import prefix     from 'gulp-autoprefixer';
 import sass       from 'gulp-sass';
@@ -15,13 +14,6 @@ gulp.task('build', ['scripts', 'styles']);
 gulp.task('clean', del.bind(null, ['public/css', 'public/js'], {read: false}));
 
 gulp.task('default', ['server', 'watch']);
-
-gulp.task('lint', () => {
-  return gulp.src(['*/**/*.js', '!node_modules/*', '!public/includes/*'])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
 
 gulp.task('nodemon', (cb) => {
 	var started = false;
@@ -63,6 +55,5 @@ gulp.task('styles', () => {
 gulp.task('watch', () => {
   gulp.watch('src/js/**/*', ['scripts', reload])
   gulp.watch('src/sass/**/*', ['styles', reload]);
-  gulp.watch('views/*.pug', reload);
-  gulp.watch('views/components/*.pug', reload);
+  gulp.watch('views/**/*', reload);
 });
