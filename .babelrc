@@ -1,5 +1,5 @@
 {
   "presets": [
-    ["latest", { "modules": false }]
+    ["latest", { "modules": true }]
   ]
 }
