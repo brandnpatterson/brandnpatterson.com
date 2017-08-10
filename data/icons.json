@@ -6,11 +6,6 @@
       "alt": "JavaScript"
     },
     {
-      "title": "Node",
-      "filepath": "/images/tech-icons/node.png",
-      "alt": "Node"
-    },
-    {
       "title": "HTML5",
       "filepath": "/images/tech-icons/html5.png",
       "alt": "HTML5"
@@ -26,14 +21,14 @@
       "alt": "jQuery"
     },
     {
+      "title": "NPM",
+      "filepath": "/images/tech-icons/npm.png",
+      "alt": "NPM"
+    },
+    {
       "title": "Gulp",
       "filepath": "/images/tech-icons/gulp.png",
       "alt": "Gulp"
-    },
-    {
-      "title": "Pug",
-      "filepath": "/images/tech-icons/pug.svg",
-      "alt": "Pug"
     },
     {
       "title": "Sass",
@@ -46,19 +41,24 @@
       "alt": "React"
     },
     {
-      "title": "Webpack",
-      "filepath": "/images/tech-icons/webpack.svg",
-      "alt": "Webpack"
-    },
-    {
-      "title": "Git",
-      "filepath": "/images/tech-icons/git.png",
-      "alt": "Git"
+      "title": "Node",
+      "filepath": "/images/tech-icons/node.png",
+      "alt": "Node"
     },
     {
       "title": "MongoDB",
       "filepath": "/images/tech-icons/mongodb.png",
       "alt": "MongoDB"
+    },
+    {
+      "title": "PHP",
+      "filepath": "/images/tech-icons/php.png",
+      "alt": "PHP"
+    },
+    {
+      "title": "MySQL",
+      "filepath": "/images/tech-icons/mysql.png",
+      "alt": "MySQL"
     }
   ]
 }
