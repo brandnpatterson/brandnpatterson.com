@@ -11,7 +11,7 @@ var reload = sync.reload;
 
 gulp.task('build', ['scripts', 'styles']);
 
-gulp.task('clean', del.bind(null, ['public/css', 'public/js'], {read: false}));
+gulp.task('clean', del.bind(null, ['public/css/style.css', 'public/js'], {read: false}));
 
 gulp.task('default', ['server', 'watch']);
 
