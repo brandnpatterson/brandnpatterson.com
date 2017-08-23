@@ -3,7 +3,7 @@
   "version": "2.2.1",
   "scripts": {
     "deploy": "webpack -p && git push heroku master",
-    "start": "gulp clean && gulp build && gulp"
+    "start": "gulp clean && gulp"
   },
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",

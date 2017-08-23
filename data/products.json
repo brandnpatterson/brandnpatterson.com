@@ -1,6 +1,13 @@
 {
   "products": [
     {
+      "title": "Form Component",
+      "link": "http://form-component.herokuapp.com/",
+      "filepath": "/images/form-component.png",
+      "alt": "Form Component",
+      "about": "Form Validation - AJAX - ES6 Modules"
+    },
+    {
       "title": "Hair Industry Salon",
       "link": "http://hairindustrysalon.herokuapp.com",
       "filepath": "/images/hairindustrysalon.png",
@@ -34,13 +41,6 @@
       "filepath": "/images/crawford-notch.png",
       "alt": "Crawford Notch",
       "about": "jQuery - Handlebars - Instafeed"
-    },
-    {
-      "title": "Goldilox Designs",
-      "link": "http://goldilox.surge.sh",
-      "filepath": "/images/goldilox.png",
-      "alt": "Goldilox Designs",
-      "about": "React - React Router - Webpack"
     }
   ]
 }

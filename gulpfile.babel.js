@@ -9,31 +9,38 @@ import webpack    from 'webpack-stream';
 
 var reload = sync.reload;
 
+// default
+gulp.task('default', ['serve', 'build', 'watch']);
+
 gulp.task('build', ['scripts', 'styles']);
 
+// clean
 gulp.task('clean', del.bind(null, ['public/css/style.css', 'public/js'], {read: false}));
 
-gulp.task('default', ['server', 'watch']);
-
+// server
 gulp.task('nodemon', (cb) => {
-	var started = false;
-	return nodemon({
-		script: 'app.js',
-	}).on('start', () => {
-		if (!started) {
-			cb();
-			started = true;
-		}
-	});
+  var called = false;
+  return nodemon({
+    script: 'app.js',
+    ignore: [
+      'gulpfile.babel.js',
+      'node_modules/'
+    ]
+  })
+  .on('start', () => {
+    if (!called) {
+      called = true;
+      cb();
+    }
+  })
+  .on('restart', () => {
+    setTimeout(() => {
+      reload({ stream: false });
+    }, 1000);
+  });
 });
 
-gulp.task('scripts', () => {
-  return gulp.src(['src/js/index.js'])
-    .pipe(webpack( require('./webpack.config.js') ))
-    .pipe(gulp.dest('public/js'));
-});
-
-gulp.task('server', ['nodemon'], () => {
+gulp.task('serve', ['nodemon'], () => {
   sync.init(null, {
     proxy: 'http://localhost:8887',
     notify: false,
@@ -41,6 +48,13 @@ gulp.task('server', ['nodemon'], () => {
     port: 8888,
     ext: '.pug'
   });
+});
+
+// build
+gulp.task('scripts', () => {
+  return gulp.src(['src/js/index.js'])
+    .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(gulp.dest('public/js'));
 });
 
 gulp.task('styles', () => {
@@ -52,8 +66,10 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('public/css'));
 });
 
+// watch
 gulp.task('watch', () => {
   gulp.watch('src/js/**/*', ['scripts', reload])
   gulp.watch('src/sass/**/*', ['styles', reload]);
   gulp.watch('views/**/*', reload);
+  gulp.watch('data/*', reload);
 });
