@@ -10,9 +10,7 @@ import webpack    from 'webpack-stream';
 var reload = sync.reload;
 
 // default
-gulp.task('default', ['serve', 'build', 'watch']);
-
-gulp.task('build', ['scripts', 'styles']);
+gulp.task('default', ['scripts', 'serve', 'styles', 'watch']);
 
 // clean
 gulp.task('clean', del.bind(null, ['public/css/style.css', 'public/js'], {read: false}));
@@ -41,13 +39,14 @@ gulp.task('nodemon', (cb) => {
 });
 
 gulp.task('serve', ['nodemon'], () => {
-  sync.init(null, {
-    proxy: 'http://localhost:8887',
-    notify: false,
-    files: 'public/**/*.*',
-    port: 8888,
-    ext: '.pug'
-  });
+  setTimeout(() => {
+    sync.init({
+      proxy: 'http://localhost:8887',
+      notify: false,
+      port: 8888,
+      ext: '.pug'
+    });
+  }, 1300);
 });
 
 // build
@@ -67,7 +66,7 @@ gulp.task('styles', () => {
 });
 
 // watch
-gulp.task('watch', () => {
+gulp.task('watch', ['nodemon'], () => {
   gulp.watch('src/js/**/*', ['scripts', reload])
   gulp.watch('src/sass/**/*', ['styles', reload]);
   gulp.watch('views/**/*', reload);
