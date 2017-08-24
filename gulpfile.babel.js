@@ -46,7 +46,7 @@ gulp.task('serve', ['nodemon'], () => {
       port: 8888,
       ext: '.pug'
     });
-  }, 1300);
+  }, 1400);
 });
 
 // build
