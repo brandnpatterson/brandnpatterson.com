@@ -1,3 +1,21 @@
 # brandnpatterson_com
 
-Portfolio Version 3!
+## commands
+
+```
+npm run build
+```
+
+Creates an optimized production build
+
+```
+npm start
+```
+
+Start node server, build, and watch sass files with sourcemaps
+
+```
+npm run lint
+```
+
+Run stylelint on styled-components

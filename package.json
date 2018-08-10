@@ -1,20 +1,36 @@
 {
   "name": "brandnpatterson_com",
   "version": "3.0.0",
-  "author": "Brandon Patterson",
-  "description": "Brandon Patterson's web development portfolio",
-  "scripts": {},
-  "main": "index.html",
-  "dependencies": {},
-  "devDependencies": {},
-  "url": "http://www.brandnpatterson.com",
-  "homepage": "http://www.brandnpatterson.com",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brandnpatterson.com.git"
+  "private": true,
+  "scripts": {
+    "build": "react-app-rewired build",
+    "lint": "stylelint src/**/*.js",
+    "start": "react-app-rewired start",
+    "test": "react-app-rewired test --env=jsdom"
   },
-  "bugs": {
-    "url": "https://github.com/brandnpatterson/brandnpatterson.com/issues"
+  "dependencies": {
+    "axios": "^0.16.2",
+    "prop-types": "^15.5.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.3",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^3.4.2"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "react-app-rewire-hot-loader": "^1.0.1",
+    "react-app-rewired": "^1.5.2",
+    "react-hot-loader": "^4.3.3",
+    "stylelint": "^9.4.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.3.2",
+    "stylelint-webpack-plugin": "^0.10.5"
+  }
 }
