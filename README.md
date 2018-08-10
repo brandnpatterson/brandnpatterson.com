@@ -1,2 +1,3 @@
-# brandnpatterson.com
-Single Page Application built with Node, Express, & Pug http://brandnpatterson.com/
+# brandnpatterson_com
+
+Portfolio Version 3!

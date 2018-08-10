@@ -1,46 +1,20 @@
 {
-  "name": "portfolio",
-  "version": "2.2.1",
-  "scripts": {
-    "deploy": "webpack -p && git push heroku master",
-    "start": "gulp clean && gulp"
-  },
+  "name": "brandnpatterson_com",
+  "version": "3.0.0",
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",
+  "scripts": {},
   "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
   "url": "http://www.brandnpatterson.com",
   "homepage": "http://www.brandnpatterson.com",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.15.4",
-    "jquery": "^3.2.1",
-    "pug": "^2.0.0-rc.3"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-latest": "^6.16.0",
-    "browser-sync": "^2.18.13",
-    "del": "^3.0.0",
-    "eslint": "^4.5.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-nodemon": "^2.2.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "node-sass": "^4.5.0",
-    "webpack": "^3.5.5",
-    "webpack-stream": "^4.0.0"
-  },
-  "engines": {
-    "node": "7.10.0",
-    "npm": "4.2.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brandnpatterson.com.git"
   },
   "bugs": {
     "url": "https://github.com/brandnpatterson/brandnpatterson.com/issues"
-  }
+  },
+  "license": "MIT"
 }
