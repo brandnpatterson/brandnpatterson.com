@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BlockOne from 'components/BlockOne';
-import BlockTwo from 'components/BlockTwo';
+import BlockOne from './components/BlockOne';
+import BlockTwo from './components/BlockTwo';
 
 class App extends Component {
   render() {
